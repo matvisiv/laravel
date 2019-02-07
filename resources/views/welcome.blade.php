@@ -73,7 +73,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    LALLALALRAVEL
+                    LRAVEL
                 </div>
 
                 <div class="links">
