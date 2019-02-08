@@ -1,273 +1,71 @@
-<?php
+<!doctype html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <title>Гостевая книга</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center">Гостевая книга на Laravel 5.1</h1>  <hr/>
+    <form method="POST" id="id-form_messages">
 
-namespace Illuminate\Notifications\Messages;
+        <div class="form-group">
+            <label for="name">Имя: *</label>
+            <input class="form-control" placeholder="Имя" name="name" type="text" id="name">
+        </div>
 
-use Closure;
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input class="form-control" placeholder="E-mail" name="email" type="email" id="email">
+        </div>
 
-class SlackMessage
-{
-    /**
-     * The "level" of the notification (info, success, warning, error).
-     *
-     * @var string
-     */
-    public $level = 'info';
+        <div class="form-group">
+            <label for="message">Сообщение: *</label>
+            <textarea class="form-control" rows="5" placeholder="Текст сообщения" name="message" cols="50"  id="message"></textarea>
+        </div>
 
-    /**
-     * The username to send the message from.
-     *
-     * @var string|null
-     */
-    public $username;
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Добавить">
+        </div>
 
-    /**
-     * The user emoji icon for the message.
-     *
-     * @var string|null
-     */
-    public $icon;
+        <div class="text-right"><b>Всего сообщений:</b> <i class="badge">0</i></div>
+        <br/>
 
-    /**
-     * The user image icon for the message.
-     *
-     * @var string|null
-     */
-    public $image;
+        <div class="messages">
+            <div class="panel panel-default">
 
-    /**
-     * The channel to send the message on.
-     *
-     * @var string|null
-     */
-    public $channel;
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span>Карлсон</span>
+                        <span class="pull-right label label-info">17:15:00 / 03.07.20016</span>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    Я спешил к вам, друзья,
+                    С жутким нетерпеньем.
+                    Я моторчик не зря
+                    Смазывал вареньем.
+                    У меня за спиной
+                    Вертится пропеллер
+                    <hr/>
+                    <div class="pull-right">
+                        <a class="btn btn-info" href="#">
+                            <i class="glyphicon glyphicon-pencil"></i>
+                        </a>
+                        <button class="btn btn-danger">
+                            <i class="glyphicon glyphicon-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
 
-    /**
-     * The text content of the message.
-     *
-     * @var string
-     */
-    public $content;
-
-    /**
-     * Indicates if channel names and usernames should be linked.
-     *
-     * @var bool
-     */
-    public $linkNames = 0;
-
-    /**
-     * Indicates if you want a preview of links inlined in the message.
-     *
-     * @var bool
-     */
-    public $unfurlLinks;
-
-    /**
-     * Indicates if you want a preview of links to media inlined in the message.
-     *
-     * @var bool
-     */
-    public $unfurlMedia;
-
-    /**
-     * The message's attachments.
-     *
-     * @var array
-     */
-    public $attachments = [];
-
-    /**
-     * Additional request options for the Guzzle HTTP client.
-     *
-     * @var array
-     */
-    public $http = [];
-
-    /**
-     * Indicate that the notification gives information about an operation.
-     *
-     * @return $this
-     */
-    public function info()
-    {
-        $this->level = 'info';
-
-        return $this;
-    }
-
-    /**
-     * Indicate that the notification gives information about a successful operation.
-     *
-     * @return $this
-     */
-    public function success()
-    {
-        $this->level = 'success';
-
-        return $this;
-    }
-
-    /**
-     * Indicate that the notification gives information about a warning.
-     *
-     * @return $this
-     */
-    public function warning()
-    {
-        $this->level = 'warning';
-
-        return $this;
-    }
-
-    /**
-     * Indicate that the notification gives information about an error.
-     *
-     * @return $this
-     */
-    public function error()
-    {
-        $this->level = 'error';
-
-        return $this;
-    }
-
-    /**
-     * Set a custom username and optional emoji icon for the Slack message.
-     *
-     * @param  string  $username
-     * @param  string|null  $icon
-     * @return $this
-     */
-    public function from($username, $icon = null)
-    {
-        $this->username = $username;
-
-        if (! is_null($icon)) {
-            $this->icon = $icon;
-        }
-
-        return $this;
-    }
-
-    /**
-     * Set a custom image icon the message should use.
-     *
-     * @param  string  $image
-     * @return $this
-     */
-    public function image($image)
-    {
-        $this->image = $image;
-
-        return $this;
-    }
-
-    /**
-     * Set the Slack channel the message should be sent to.
-     *
-     * @param  string  $channel
-     * @return $this
-     */
-    public function to($channel)
-    {
-        $this->channel = $channel;
-
-        return $this;
-    }
-
-    /**
-     * Set the content of the Slack message.
-     *
-     * @param  string  $content
-     * @return $this
-     */
-    public function content($content)
-    {
-        $this->content = $content;
-
-        return $this;
-    }
-
-    /**
-     * Define an attachment for the message.
-     *
-     * @param  \Closure  $callback
-     * @return $this
-     */
-    public function attachment(Closure $callback)
-    {
-        $this->attachments[] = $attachment = new SlackAttachment;
-
-        $callback($attachment);
-
-        return $this;
-    }
-
-    /**
-     * Get the color for the message.
-     *
-     * @return string|null
-     */
-    public function color()
-    {
-        switch ($this->level) {
-            case 'success':
-                return 'good';
-            case 'error':
-                return 'danger';
-            case 'warning':
-                return 'warning';
-        }
-    }
-
-    /**
-     * Find and link channel names and usernames.
-     *
-     * @return $this
-     */
-    public function linkNames()
-    {
-        $this->linkNames = 1;
-
-        return $this;
-    }
-
-    /**
-     * Find and link channel names and usernames.
-     *
-     * @param  string  $unfurl
-     * @return $this
-     */
-    public function unfurlLinks($unfurl)
-    {
-        $this->unfurlLinks = $unfurl;
-
-        return $this;
-    }
-
-    /**
-     * Find and link channel names and usernames.
-     *
-     * @param  string  $unfurl
-     * @return $this
-     */
-    public function unfurlMedia($unfurl)
-    {
-        $this->unfurlMedia = $unfurl;
-
-        return $this;
-    }
-
-    /**
-     * Set additional request options for the Guzzle HTTP client.
-     *
-     * @param  array  $options
-     * @return $this
-     */
-    public function http(array $options)
-    {
-        $this->http = $options;
-
-        return $this;
-    }
-}
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
