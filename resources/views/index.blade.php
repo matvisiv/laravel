@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="container">
-    <h1 class="text-center">{{ $pagetitle }}</h1>  <hr/>
+    <h1 class="text-center">{{ $pagetitle }}</h1>
 
         @yield('content')
 
