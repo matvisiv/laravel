@@ -1,4 +1,4 @@
-    @extends('index)'
+    @extends('index')
 
     @section('content')
     <form method="POST" id="id-form_messages">

@@ -5,11 +5,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
-    <title>hghghgh</title>
+    <title>{{ $title }}</title>
 </head>
 <body>
 <div class="container">
-    <h1 class="text-center"></h1>
+    <h1 class="text-center">{{ $pagetitle }}</h1> 
 
         @yield('content')
 
