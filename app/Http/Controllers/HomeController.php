@@ -9,10 +9,10 @@ class HomeController extends Controller
 {
     public function index()
     {
-        Return view('messages.pages.index');
+        Return view('pages.messages.index');
     }
     public function edit($id)
     {
-        Return view('messages.pages.edit');
+        Return view('pages.messages.edit');
     }
 }
