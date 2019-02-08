@@ -13,7 +13,7 @@
 Route::get('/', function () {
     return view('index');
 */
-Route::get('/', ‘HomeController@getindex’);  
+Route::get('/', "HomeController@getindex");  
 
 
 
