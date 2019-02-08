@@ -9,7 +9,11 @@ class HomeController extends Controller
 {
     public function index()
     {
-        Return view('pages.messages.index');
+    	$data = [
+    		'title' => 'Guestbook',
+    		'pagetitle' => 'Гостьова книга'
+    	];
+        Return view('pages.messages.index', $data);
     }
     public function edit($id)
     {
