@@ -1,90 +1,71 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <title>Гостевая книга</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center">Гостевая книга на Laravel 5.1</h1>  <hr/>
+    <form method="POST" id="id-form_messages">
 
-        <title>INDEX</title>
+        <div class="form-group">
+            <label for="name">Имя: *</label>
+            <input class="form-control" placeholder="Имя" name="name" type="text" id="name">
+        </div>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input class="form-control" placeholder="E-mail" name="email" type="email" id="email">
+        </div>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-            .full-height {
-                height: 100vh;
-            }
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-            .position-ref {
-                position: relative;
-            }
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-            .content {
-                text-align: center;
-            }
-            .title {
-                font-size: 84px;
-            }
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+        <div class="form-group">
+            <label for="message">Сообщение: *</label>
+            <textarea class="form-control" rows="5" placeholder="Текст сообщения" name="message" cols="50"  id="message"></textarea>
+        </div>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Добавить">
+        </div>
+
+        <div class="text-right"><b>Всего сообщений:</b> <i class="badge">0</i></div>
+        <br/>
+
+        <div class="messages">
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span>Карлсон</span>
+                        <span class="pull-right label label-info">17:15:00 / 03.07.20016</span>
+                    </h3>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    INDEX LARAVEL
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Larcasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="panel-body">
+                    Я спешил к вам, друзья,
+                    С жутким нетерпеньем.
+                    Я моторчик не зря
+                    Смазывал вареньем.
+                    У меня за спиной
+                    Вертится пропеллер
+                    <hr/>
+                    <div class="pull-right">
+                        <a class="btn btn-info" href="#">
+                            <i class="glyphicon glyphicon-pencil"></i>
+                        </a>
+                        <button class="btn btn-danger">
+                            <i class="glyphicon glyphicon-trash"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </body>
+    </form>
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
 </html>
