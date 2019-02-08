@@ -16,4 +16,4 @@ Route::get('/', function () {
 
 
 */
-Route::get('/', [‘uses’ => ‘HomeController@index’,’as’ => ‘home’]);
+Route::get('/', ‘HomeController@index’);
