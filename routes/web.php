@@ -9,11 +9,10 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-
+*/
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
-*/
-Route::get('/', [‘uses’ => ‘HomeController@index’,’as’ => ‘home’]);
-Route::get('message/{id}/edit', [‘uses’ => ‘HomeController@edit’,’as’ => ‘message.edit’]);
+
+
