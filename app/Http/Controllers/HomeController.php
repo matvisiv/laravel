@@ -13,7 +13,7 @@ class HomeController extends Controller
     		'title' => 'Guestbook',
     		'pagetitle' => 'Гостьова книга'
     	];
-        Return view('pages.messages.index', $data);
+        Return view('index', $data);
     }
     public function edit($id)
     {
