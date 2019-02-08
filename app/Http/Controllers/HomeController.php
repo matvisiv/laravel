@@ -11,7 +11,7 @@ class HomeController extends Controller
     {
     	$data = [
     		'title' => 'Guestbook',
-    		'pagetitle' => 'LALALARAVEL Guestbook'
+    		'pgetitle' => 'LALALARAVEL Guestbook'
     	];
         Return view('pages.messages.index', $data);
     }
