@@ -1,9 +1,9 @@
-     @extends('index')
+     
 
-    @section('content')
-    @include('_common._form')
+    <?php $__env->startSection('content'); ?>
+    <?php echo $__env->make('_common._form', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
-        <div class="text-right"><b>Всего сообщений:</b> <i class="badge">{{$count}}</i></div>
+        <div class="text-right"><b>Всего сообщений:</b> <i class="badge"><?php echo e($count); ?></i></div>
         <br/>
 
         <div class="messages">
@@ -34,4 +34,6 @@
                 </div>
             </div>
         </div>
-    @stop
+    <?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('index', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>

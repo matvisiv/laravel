@@ -10,12 +10,12 @@ class HomeController extends Controller
 {
     public function index()
     {
-    	$messages = Message::all;
-    	dd($messages);
-    	$data = [
+	$data = [
     		'title' => 'Guestbook',
-    		'pagetitle' => 'LALALARAVEL Guestbook'
-    	];
+    		'pagetitle' => 'LALALARAVEL Guestbook',
+		'messages' => Message::all(),
+		'count' => message::count()
+    ];
         Return view('pages.messages.index', $data);
     }
     public function edit($id)
