@@ -22,7 +22,8 @@
                     </div>
                 </div>
             </div>
-            @endif
+            @endforeach
         </div>
+        @endif
     </form>
 
