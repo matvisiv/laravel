@@ -19,4 +19,4 @@
             <input class="btn btn-primary" type="submit" value="Добавить">
         </div>
         </div>
-	<hr>
+    
