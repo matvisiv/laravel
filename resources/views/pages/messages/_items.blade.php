@@ -1,5 +1,5 @@
     <div class="messages">
-        @if ( ! $messeges->isEmpty())
+        @if ( ! $messeges->isEmpty() )
             @foreach ($messages as $message)
             <div class="panel panel-default">
 
