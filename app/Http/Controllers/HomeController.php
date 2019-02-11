@@ -13,7 +13,7 @@ class HomeController extends Controller
 	$data = [
     		'title' => 'Guestbook',
     		'pagetitle' => 'LALALARAVEL Guestbook',
-		'messages' => Message::all(),
+		'messages' => Message::latest()->get(),
 		'count' => message::count()
     ];
         Return view('pages.messages.index', $data);
