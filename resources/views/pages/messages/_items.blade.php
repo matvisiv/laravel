@@ -23,6 +23,9 @@
                 </div>
             </div>
             @endforeach
+            <div class="text-center">
+                {!! $messages->render() !!}
+            </div>
         </div>
         @endif
     </form>
