@@ -6,7 +6,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">
                         <span>{!! $message->name !!}</span>
-                        <span class="pull-right label label-info">{!! $message->date !!}}</span>
+                        <span class="pull-right label label-info">{!! $message->date !!}</span>
                     </h3>
                 </div>
                 <div class="panel-body">
