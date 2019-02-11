@@ -1,5 +1,5 @@
-//    @extends('index')
+    @extends('index')
 
-//    @section('content')
-//        @include('_common._form')
-//    @stop
+    @section('content')
+    @include('_common._form')
+    @stop
