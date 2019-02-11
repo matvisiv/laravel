@@ -1,7 +1,26 @@
      
 
     <?php $__env->startSection('content'); ?>
-    <?php echo $__env->make('_common._form', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <form method="POST" id="id-form_messages">
+
+        <div class="form-group">
+            <label for="name">Имя: *</label>
+            <input class="form-control" placeholder="Имя" name="name" type="text" id="name">
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input class="form-control" placeholder="E-mail" name="email" type="email" id="email">
+        </div>
+
+        <div class="form-group">
+            <label for="message"></label>
+            <textarea class="form-control" rows="5" placeholder="Текст сообщения" name="message" cols="50"  id="message"></textarea>
+        </div>
+
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Добавить">
+        </div>
 
         <div class="text-right"><b>Всего сообщений:</b> <i class="badge"><?php echo e($count); ?></i></div>
         <br/>
@@ -17,7 +36,7 @@
                 </div>
                 <div class="panel-body">
                     Я спешил к вам, друзья,
-                    С жутким нетерпеньем.
+                    С жутким нетерпfеньем.
                     Я моторчик не зря
                     Смазывал вареньем.
                     У меня за спиной
@@ -34,6 +53,7 @@
                 </div>
             </div>
         </div>
+    </form>
     <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('index', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
