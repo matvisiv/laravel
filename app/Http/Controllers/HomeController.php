@@ -12,7 +12,7 @@ class HomeController extends Controller
     {
 	$data = [
     		'title' => 'Guestbook',
-    		'pagetitle' => 'LALALARAVEL Guestbook',
+    		'pagetitle' => 'LALALAraveL',
 		'messages' => Message::latest()->paginate(4),
 		'count' => message::count()
     ];
