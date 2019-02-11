@@ -22,7 +22,7 @@
             <input class="btn btn-primary" type="submit" value="Добавить">
         </div>
 
-        <div class="text-right"><b>Всего сообщений:</b> <i class="badge">0</i></div>
+        <div class="text-right"><b>Всего сообщений:</b> <i class="badge">{{$count}}}</i></div>
         <br/>
 
         <div class="messages">
