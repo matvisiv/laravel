@@ -1,16 +1,3 @@
-    {{ Form::open(array('url'=>'/../resources/views/_common/_form')) }}
-    
-    {{ Form::label('name','Имя: *',array('id'=>'','class'=>'')) }}
-    {{ Form::textarea('name','Pavlo',array('id'=>'','class'=>'')) }}
-
-    {{ Form::label('email','Email',array('id'=>'','class'=>'')) }}
-    {{ Form::email('email','hello@clivern.com',array('id'=>'','class'=>'')) }}
-
-    {{ Form::label('message','Сообщение: *',array('id'=>'','class'=>'')) }}
-    {{ Form::textarea('message','Текст сообщения',array('id'=>'','class'=>'')) }}
-
-    {{ Form::submit('Save') }}
-    
     <form method="POST" id="id-form_messages">
 
         <div class="form-group">
@@ -34,4 +21,3 @@
         <hr>
 
     </form>
-    {{ Form::close() }}
