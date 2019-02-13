@@ -18,7 +18,11 @@ Route::get('message/{id}/edit', ['uses' => 'HomeController@edit','as' => 'messag
 
 
 Route::get('/form',function(){
-  return view('form');
+	$ddd = new messages;
+	$ddd->name = "igor";
+	$ddd->email = "ka4r6@a3ui.g";
+	$ddd->save();
+	return view('messages.index');
 });
 
 

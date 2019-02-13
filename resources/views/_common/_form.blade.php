@@ -1,37 +1,4 @@
-<?  
-use App\Models\form_add;
-
-    {{ Form::open(array('url'=>'foo/bar')) }}
-    
-    {{ Form::label('name','Имя: *',array('id'=>'','class'=>'')) }}
-    {{ Form::textarea('name','Pavlo',array('id'=>'','class'=>'')) }}
-
-    {{ Form::label('email','Email',array('id'=>'','class'=>'')) }}
-    {{ Form::email('email','hello@clivern.com',array('id'=>'','class'=>'')) }}
-
-    {{ Form::label('message','Сообщение: *',array('id'=>'','class'=>'')) }}
-    {{ Form::textarea('message','Текст сообщения',array('id'=>'','class'=>'')) }}
-
-{{ Form::submit('Save') }}
-?>
-    <?php
-        echo Form::open();
-           echo Form::text('name','Имя: *');
-           echo '<br/>';
-           
-           echo Form::text('email', 'example@gmail.com');
-           echo '<br/>';
-           
-           echo Form::file('image');
-           echo '<br/>';
-           
-           echo Form::select('size', array('L' => 'Large', 'S' => 'Small'));
-           echo '<br/>';
-           
-           echo Form::submit('Click Me!');
-        echo Form::close();
-    ?>
-    <form method="POST" id="id-form_messages">
+    <form method="POST" action="/form" id="id-form_messages">
 
         <div class="form-group">
             <label for="name">Имя: *</label>
@@ -54,4 +21,3 @@ use App\Models\form_add;
         <hr>
 
     </form>
-    {{ Form::close() }}
