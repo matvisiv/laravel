@@ -18,7 +18,7 @@ Route::get('message/{id}/edit', ['uses' => 'HomeController@edit','as' => 'messag
 
 
 Route::post('/form', ['uses' => 'HomeController@add','as' => 'home1']);
-});
+
 
 
 
