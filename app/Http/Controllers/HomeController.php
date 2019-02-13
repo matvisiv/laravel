@@ -30,12 +30,6 @@ class HomeController extends Controller
 
     public function add(Request $request)
     {
-	$data = [
-	'title' => 'Guestbook',
-	'pagetitle' => 'LALALAraveL',
-	'messages' => Message::latest()->paginate(4),
-	'count' => message::count()
-    ];
 
 ###############################################	
         $dd($request->input('name'));
