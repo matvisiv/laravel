@@ -30,14 +30,11 @@ class HomeController extends Controller
 
     public function add(Request $request)
     {
-
-###############################################	
-        $dd($request->input('name'));
         $ddd = new Message;
         $ddd->name = $request->input('name');
-#        $ddd->email = $request->input('email');
-#        $ddd->messages = $request->input('messages');
-#        $ddd->save();
+        $ddd->email = $request->input('email');
+        $ddd->messages = $request->input('messages');
+        $ddd->save();
         Return view('pages.messages.index');
     }
 }
