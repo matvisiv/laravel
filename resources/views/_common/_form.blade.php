@@ -1,3 +1,6 @@
+<?  
+use App\Models\form_add;
+
     {{ Form::open(array('url'=>'/../resources/views/_common/_form')) }}
     
     {{ Form::label('name','Имя: *',array('id'=>'','class'=>'')) }}
@@ -9,8 +12,25 @@
     {{ Form::label('message','Сообщение: *',array('id'=>'','class'=>'')) }}
     {{ Form::textarea('message','Текст сообщения',array('id'=>'','class'=>'')) }}
 
-    {{ Form::submit('Save') }}
-    
+{{ Form::submit('Save') }}
+?>
+    <?php
+        echo Form::open();
+           echo Form::text('name','Имя: *');
+           echo '<br/>';
+           
+           echo Form::text('email', 'example@gmail.com');
+           echo '<br/>';
+           
+           echo Form::file('image');
+           echo '<br/>';
+           
+           echo Form::select('size', array('L' => 'Large', 'S' => 'Small'));
+           echo '<br/>';
+           
+           echo Form::submit('Click Me!');
+        echo Form::close();
+    ?>
     <form method="POST" id="id-form_messages">
 
         <div class="form-group">
