@@ -19,14 +19,14 @@ class HomeController extends Controller
         Return view('pages.messages.index', $data);
     }
 
-    public function edit($id)
-    {
-        $ddd = new messages;
-        $ddd->name = "igor";
-        $ddd->email = "ka4r6@a3ui.g";
-        $ddd->save();
-        Return view('messages.index');
-    }
+ #   public function edit($id)
+ #   {
+ #       $ddd = new messages;
+ #       $ddd->name = "igor";
+ #       $ddd->email = "ka4r6@a3ui.g";
+ #       $ddd->save();
+ #       Return view('messages.index');
+ #   }
 
     public function add(Request $request)
     {
@@ -37,8 +37,8 @@ class HomeController extends Controller
 	'count' => message::count()
     ];
 
-#	dd("dlsgkhsdlgfh");
-        $ddd = new messages::all();
+###############################################	
+        $ddd = messages::all();
         $ddd->name = $request->input('name');
         $ddd->email = "ka4r6@a3ui.g";
         $ddd->save();
