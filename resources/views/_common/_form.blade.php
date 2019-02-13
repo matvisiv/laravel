@@ -1,4 +1,4 @@
-    <form method="POST" action="{{URL::to('/form')}}" id="id-form_messages">
+    <form method="PUT" action="{{URL::to('/form')}}" id="id-form_messages">
 
         <div class="form-group">
             <label for="name">Имя: *</label>
