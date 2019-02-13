@@ -11,7 +11,7 @@
 
         <div class="form-group">
             <label for="messages">Сообщение: *</label>
-            <textarea class="form-control" rows="5" placeholder="Текст сообщения" name="message" cols="50"  id="message"></textarea>
+            <textarea class="form-control" rows="5" placeholder="Текст сообщения" name="messages" cols="50"  id="messages"></textarea>
         </div>
 
         <div class="form-group">
