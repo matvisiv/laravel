@@ -28,12 +28,20 @@ class HomeController extends Controller
         Return view('messages.index');
     }
 
-    public function add()
+    public function add(Request $request)
     {
+	$data = [
+	'title' => 'Guestbook',
+	'pagetitle' => 'LALALAraveL',
+	'messages' => Message::latest()->paginate(4),
+	'count' => message::count()
+    ];
+
+#	dd("dlsgkhsdlgfh");
         $ddd = new messages;
-        $ddd->name = "igor";
+        $ddd->name = $request->input('name');
         $ddd->email = "ka4r6@a3ui.g";
         $ddd->save();
-        Return view('messages.index');
+#        Return Redirect::route('pages.messages.index');
     }
 }

@@ -17,7 +17,7 @@ Route::get('/', ['uses' => 'HomeController@index','as' => 'home']);
 #Route::get('message/{id}/edit', ['uses' => 'HomeController@edit','as' => 'message.edit']);
 
 
-Route::post('/form', ['uses' => 'HomeController@add','as' => 'home1']);
+Route::any('/form', 'HomeController@add');
 
 
 

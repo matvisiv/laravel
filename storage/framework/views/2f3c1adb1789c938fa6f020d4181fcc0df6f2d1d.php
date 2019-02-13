@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="container">
-    <h1 class="text-center"><?php echo e(isset ($pagetitle) ? $pagetitle : 'Guestbookokok'); ?></h1> 
+    <h1 class="text-center"><?php echo e(isset ($pagetitle) ? $pagetitle : 'Gest Book'); ?></h1> 
 
         <?php echo $__env->yieldContent('content'); ?>
 
