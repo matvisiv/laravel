@@ -1,5 +1,4 @@
-    <form method="PUT" action="{{URL::to('/form')}}" id="id-form_messages">
-    {{ craf_field()}}
+    <form method="POST" action="{{URL::to('/form')}}" id="id-form_messages">
         <div class="form-group">
             <label for="name">Имя: *</label>
             <input class="form-control" placeholder="Имя" name="name" type="text" id="name">
