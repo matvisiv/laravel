@@ -1,7 +1,7 @@
 <?  
 use App\Models\form_add;
 
-    {{ Form::open(array('url'=>'/../resources/views/_common/_form')) }}
+    {{ Form::open(array('url'=>'foo/bar')) }}
     
     {{ Form::label('name','Имя: *',array('id'=>'','class'=>'')) }}
     {{ Form::textarea('name','Pavlo',array('id'=>'','class'=>'')) }}
