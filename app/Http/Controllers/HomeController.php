@@ -38,11 +38,12 @@ class HomeController extends Controller
     ];
 
 ###############################################	
-        $ddd = new message;
-        $ddd->name = $request->input('name');
-        $ddd->email = $request->input('email');
-        $ddd->messages = $request->input('messages');
-        $ddd->save();
+    $ddd = new Message (array(
+        'name' => \Input::post('name'),
+        'email' => \Input::post('email'),
+        'message' => \Input::post('messages'),
+    ));
+    $ddd->save();
         Return view('pages.messages.index');
     }
 }
