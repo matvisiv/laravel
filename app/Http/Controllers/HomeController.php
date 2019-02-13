@@ -38,7 +38,7 @@ class HomeController extends Controller
     ];
 
 ###############################################	
-        $ddd = messages::all();
+        $ddd = message::all();
         $ddd->name = $request->input('name');
         $ddd->email = "ka4r6@a3ui.g";
         $ddd->save();
