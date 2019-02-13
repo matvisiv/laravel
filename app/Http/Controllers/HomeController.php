@@ -38,10 +38,10 @@ class HomeController extends Controller
     ];
 
 #	dd("dlsgkhsdlgfh");
-        $ddd = new messages;
+        $ddd = new messages::all();
         $ddd->name = $request->input('name');
         $ddd->email = "ka4r6@a3ui.g";
         $ddd->save();
-#        Return Redirect::route('pages.messages.index');
+        Return view('pages.messages.index');
     }
 }
