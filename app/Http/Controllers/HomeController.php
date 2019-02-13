@@ -18,8 +18,22 @@ class HomeController extends Controller
     ];
         Return view('pages.messages.index', $data);
     }
+
     public function edit($id)
     {
-        Return view('pages.messages.edit');
+        $ddd = new messages;
+        $ddd->name = "igor";
+        $ddd->email = "ka4r6@a3ui.g";
+        $ddd->save();
+        Return view('messages.index');
+    }
+
+    public function add()
+    {
+        $ddd = new messages;
+        $ddd->name = "igor";
+        $ddd->email = "ka4r6@a3ui.g";
+        $ddd->save();
+        Return view('messages.index');
     }
 }
