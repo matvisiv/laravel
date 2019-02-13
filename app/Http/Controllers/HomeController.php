@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Input;
 use App\Models\Message;
 
 class HomeController extends Controller
@@ -39,12 +38,12 @@ class HomeController extends Controller
     ];
 
 ###############################################	
-    $ddd = new Message (array(
-        'name' => \Input::post('name'),
-        'email' => \Input::post('email'),
-        'message' => \Input::post('messages'),
-    ));
-    $ddd->save();
+        dd($request->all());
+#        $ddd = new message;
+#        $ddd->name = $request->input('name');
+#        $ddd->email = $request->input('email');
+#        $ddd->messages = $request->input('messages');
+#        $ddd->save();
         Return view('pages.messages.index');
     }
 }
