@@ -43,7 +43,7 @@ class HomeController extends Controller
         $ddd->name = $request->input('name');
         $ddd->email = $request->input('email');
         $ddd->messages = $request->input('messages');
-        $ddd->date = date();
+        $ddd->date = date(%m/%d/%Y);
         $ddd->save();
         Return view('pages.messages.index');
     }
