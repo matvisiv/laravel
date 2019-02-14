@@ -1,3 +1,5 @@
+    <div class="text-right"><b>Всего сообщений:</b> <i class="badge"><?php echo e($count); ?></i></div>
+    <br/>
     <div class="messages">
         <?php if( ! $messages->isEmpty() ): ?>
             <?php $__currentLoopData = $messages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $message): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -13,6 +15,7 @@
                     <?php echo $message->messages; ?>
 
                     <hr/>
+                    <span><?php echo $message->email; ?></span>
                     <div class="pull-right">
                         <a class="btn btn-info" href="#">
                             <i class="glyphicon glyphicon-pencil"></i>
