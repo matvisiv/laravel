@@ -13,7 +13,7 @@
             <label for="messages">Сообщение: *</label>
             <textarea class="form-control" rows="5" placeholder="Текст сообщения" name="messages" cols="50"  id="messages"></textarea>
         </div>
-
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="form-group">
             <input class="btn btn-primary" type="submit" value="Добавить">
         </div>
