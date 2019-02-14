@@ -1,10 +1,8 @@
-    <div class="text-right"><b>Всего сообщений:</b> <i class="badge">{{ $count }}</i></div>
     <br/>
     <div class="messages">
         @if ( ! $messages->isEmpty() )
             @foreach ($messages as $message)
             <div class="panel panel-default">
-
                 <div class="panel-heading">
                     <h3 class="panel-title">
                         <span>{!! $message->name !!}</span>
