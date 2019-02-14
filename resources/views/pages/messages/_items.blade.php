@@ -1,4 +1,5 @@
     <div class="text-right"><b>Всего сообщений:</b> <i class="badge">{{ $count }}</i></div>
+     <br/>
     <br/>
     <div class="messages">
         @if ( ! $messages->isEmpty() )
