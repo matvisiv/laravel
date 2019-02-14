@@ -30,7 +30,7 @@ class HomeController extends Controller
 
     public function add(Request $request)
     {
-        data = [
+        $data = [
         'title' => 'Guestbook',
         'pagetitle' => 'LALALAraveL',
         'messages' => Message::latest()->paginate(4),
