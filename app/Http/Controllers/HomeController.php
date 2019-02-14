@@ -11,8 +11,8 @@ class HomeController extends Controller
     public function index()
     {
 	$data = [
-    		'title' => 'Guestbook',
-    		'pagetitle' => 'LALALAraveL',
+    	'title' => 'Guestbook',
+    	'pagetitle' => 'LALALAraveL',
 		'messages' => Message::latest()->paginate(4),
 		'count' => message::count()
     ];
