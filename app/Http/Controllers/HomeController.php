@@ -37,4 +37,9 @@ class HomeController extends Controller
         $ddd->save();
         return redirect()->action('HomeController@index');
     }
+
+    public function edit($id)
+    {
+        $user = Message::find($id);  
+    }
 }
