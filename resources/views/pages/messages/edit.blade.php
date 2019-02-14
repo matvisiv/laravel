@@ -2,7 +2,7 @@
 
     @section('content')
     	@if ( ! $id->isEmpty() )
-
+    	@foreach ($messages as $message)
 	    <form method="POST" action="{{URL::to('/edit')}}" id="id-form_edit">
 	        <div class="form-group">
 	            <label for="name">Имя: *</label>
@@ -25,6 +25,7 @@
 	        <hr>
 
    		 </form>
+   		 @endforeach
     @endif
 
     @stop
