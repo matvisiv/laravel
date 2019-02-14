@@ -1,5 +1,4 @@
-    <form method="POST" action="http://ddd.ua/form" id="id-form_messages">
-
+    <form method="POST" action="<?php echo e(URL::to('/form')); ?>" id="id-form_messages">
         <div class="form-group">
             <label for="name">Имя: *</label>
             <input class="form-control" placeholder="Имя" name="name" type="text" id="name">
@@ -11,10 +10,10 @@
         </div>
 
         <div class="form-group">
-            <label for="message">Сообщение: *</label>
-            <textarea class="form-control" rows="5" placeholder="Текст сообщения" name="message" cols="50"  id="message"></textarea>
+            <label for="messages">Сообщение: *</label>
+            <textarea class="form-control" rows="5" placeholder="Текст сообщения" name="messages" cols="50"  id="messages"></textarea>
         </div>
-
+        <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
         <div class="form-group">
             <input class="btn btn-primary" type="submit" value="Добавить">
         </div>

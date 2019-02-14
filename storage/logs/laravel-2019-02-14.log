@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [2019-02-14 10:19:02] local.ERROR: Undefined variable: count (View: /var/www/html/MyProject/resources/views/pages/messages/index.blade.php) {"exception":"[object] (ErrorException(code: 0): Undefined variable: count (View: /var/www/html/MyProject/resources/views/pages/messages/index.blade.php) at /var/www/html/MyProject/storage/framework/views/150e3f1374840c0ec4025426d1c62ec0ebf041c0.php:5, ErrorException(code: 0): Undefined variable: count at /var/www/html/MyProject/storage/framework/views/150e3f1374840c0ec4025426d1c62ec0ebf041c0.php:5)
 [stacktrace]
 #0 /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
@@ -738,6 +739,27 @@
 #14 /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(75): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
 #15 /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
 #16 /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+=======
+[2019-02-14 16:40:25] local.ERROR: file_put_contents(/var/www/html/MyProject/storage/framework/views/cfd127710d4f46ae375fa4d2a92d349910e82965.php): failed to open stream: Permission denied {"exception":"[object] (ErrorException(code: 0): file_put_contents(/var/www/html/MyProject/storage/framework/views/cfd127710d4f46ae375fa4d2a92d349910e82965.php): failed to open stream: Permission denied at /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:122)
+[stacktrace]
+#0 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'file_put_conten...', '/var/www/html/M...', 122, Array)
+#1 /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(122): file_put_contents('/var/www/html/M...', '<?php $__env->s...', 0)
+#2 /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/View/Compilers/BladeCompiler.php(122): Illuminate\\Filesystem\\Filesystem->put('/var/www/html/M...', '<?php $__env->s...')
+#3 /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(51): Illuminate\\View\\Compilers\\BladeCompiler->compile('/var/www/html/M...')
+#4 /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/View/View.php(142): Illuminate\\View\\Engines\\CompilerEngine->get('/var/www/html/M...', Array)
+#5 /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/View/View.php(125): Illuminate\\View\\View->getContents()
+#6 /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/View/View.php(90): Illuminate\\View\\View->renderContents()
+#7 /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/Http/Response.php(42): Illuminate\\View\\View->render()
+#8 /var/www/html/MyProject/vendor/symfony/http-foundation/Response.php(202): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#9 /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Symfony\\Component\\HttpFoundation\\Response->__construct(Object(Illuminate\\View\\View), 419, Array)
+#10 /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(81): Illuminate\\Routing\\ResponseFactory->make(Object(Illuminate\\View\\View), 419, Array)
+#11 /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(380): Illuminate\\Routing\\ResponseFactory->view('errors::419', Array, 419, Array)
+#12 /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(289): Illuminate\\Foundation\\Exceptions\\Handler->renderHttpException(Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#13 /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(188): Illuminate\\Foundation\\Exceptions\\Handler->prepareResponse(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#14 /var/www/html/MyProject/app/Exceptions/Handler.php(49): Illuminate\\Foundation\\Exceptions\\Handler->render(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#15 /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(83): App\\Exceptions\\Handler->render(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\TokenMismatchException))
+#16 /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(55): Illuminate\\Routing\\Pipeline->handleException(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\TokenMismatchException))
+>>>>>>> 14601dad267f4c127840c738b287cb2d15b892cc
 #17 /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
 #18 /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
 #19 /var/www/html/MyProject/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))

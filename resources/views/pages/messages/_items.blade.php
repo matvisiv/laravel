@@ -15,8 +15,8 @@
                     {!! $message->messages !!}
                     <hr/>
                     <span>{!! $message->email !!}</span>
-                    <div class="pull-right">
-                        <a class="btn btn-info" href="#">
+                    <div class="pull-right"a>
+                        <a class="btn btn-info" href="/{!! $message->id !!}">
                             <i class="glyphicon glyphicon-pencil"></i>
                         </a>
                         <button class="btn btn-danger">
