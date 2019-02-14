@@ -14,6 +14,7 @@
                 <div class="panel-body">
                     {!! $message->messages !!}
                     <hr/>
+                    <span>{!! $message->email !!}</span>
                     <div class="pull-right">
                         <a class="btn btn-info" href="#">
                             <i class="glyphicon glyphicon-pencil"></i>
