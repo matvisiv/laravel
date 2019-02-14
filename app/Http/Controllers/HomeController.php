@@ -31,9 +31,9 @@ class HomeController extends Controller
     public function add(Request $request)
     {
         $ddd = new Message;
-        $ddd->name = $request->Input::post('name');
-        $ddd->email = $request->Input::post('email');
-        $ddd->messages = $request->Input::post('messages');
+        $ddd->name = $request->('name');
+        $ddd->email = $request->('email');
+        $ddd->messages = $request->('messages');
         $ddd->save();
         Return view('pages.messages.index');
     }
