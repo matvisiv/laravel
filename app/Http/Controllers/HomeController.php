@@ -41,11 +41,11 @@ class HomeController extends Controller
     public function edit($id,Request $request)
     {
         $old = Message::find($id);
-                dd($old);
         $data = [
             'data' => $old
         ];       
-         return view('pages.messages.edit', $data);        
+         return view('pages.messages.edit', $data);
+         dd($data);        
 
 
     }
