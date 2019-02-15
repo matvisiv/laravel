@@ -14,7 +14,7 @@ Route::get('/', function () {
     return view('index');
 */
 Route::get('/', ['uses' => 'HomeController@index','as' => 'home']);  
-Route::get('message/{id}/edit', ['uses' => 'HomeController@edit','as' => 'messages.edit']);
+Route::get('/{id}/edit', ['uses' => 'HomeController@edit']);
 
 
 Route::post('/form', 'HomeController@add');
