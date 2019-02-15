@@ -1,11 +1,10 @@
     @extends('index')
 
     @section('content')
-    	 @foreach ($data)
 	    <form method="POST" action="{{URL::to('/edit')}}" id="id-form_edit">
 	        <div class="form-group">
 	            <label for="name">Имя: *</label>
-	            <input class="form-control" value="{{ $data->name }}" type="text" id="name">
+	            <input class="form-control" value="{!! $data->name !!}" type="text" id="name">
 	        </div>
 
 	        <div class="form-group">
@@ -24,6 +23,5 @@
 	        <hr>
 
    		 </form>
-   		 @endforeach
 
     @stop
