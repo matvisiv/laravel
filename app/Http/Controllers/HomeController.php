@@ -42,5 +42,6 @@ class HomeController extends Controller
     {
 #        $user = Message::find($id);
         $old = $id->toArray(); 
+        dd($old);
     }
 }
