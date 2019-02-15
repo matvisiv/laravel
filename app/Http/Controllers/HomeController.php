@@ -41,15 +41,9 @@ class HomeController extends Controller
     public function edit(Message $id,Request $request)
     {
 #        $user = Message::find($id);
-        $old = $id->toArray();
+        $old = $id->toArray(); 
+        dd($old);
 
-        if(view()->exists('pages.messages.edit')){
-            $dat = [
-                'dat' => $old
-            ];       
-            return view('pages.messages.edit', $dat); 
-            dd($dat);
-               
         }
     }
 }
