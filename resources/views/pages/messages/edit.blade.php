@@ -3,7 +3,7 @@
     @section('content')
 	    <form method="POST" action="{{URL::to('/edit')}}" id="id-form_edit">
 	        <div class="form-group">
-	            <label for="name">{!! $data->name !!}</label>
+	            <label for="name">{!! $data->id !!}</label>
 	            <input class="form-control" value="" type="text" id="name">
 	        </div>
 
