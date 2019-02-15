@@ -47,7 +47,9 @@ class HomeController extends Controller
             $dat = [
                 'dat' => $old
             ];       
-            return view('pages.messages.edit', $dat);        
+            return view('pages.messages.edit', $dat); 
+            dd($dat);
+               
         }
     }
 }
