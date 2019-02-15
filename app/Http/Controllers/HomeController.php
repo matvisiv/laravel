@@ -40,6 +40,7 @@ class HomeController extends Controller
 
     public function edit($id)
     {
-        $user = Message::find($id);  
+        $user = Message::find($id);
+        Return view('pages.messages.edit', $user);
     }
 }

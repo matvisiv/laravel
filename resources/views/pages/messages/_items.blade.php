@@ -16,7 +16,7 @@
                     <hr/>
                     <span>{!! $message->email !!}</span>
                     <div class="pull-right"a>
-                        <a class="btn btn-info" href="/{!! $message->id !!}">
+                        <a class="btn btn-info" href="/{!! $message->id !!}/edit">
                             <i class="glyphicon glyphicon-pencil"></i>
                         </a>
                         <button class="btn btn-danger">
