@@ -38,15 +38,16 @@ class HomeController extends Controller
         return redirect()->action('HomeController@index');
     }
 
-    public function edit($id,Request $request)
+    public function edit(Message $id,Request $request)
     {
-        $old = Message::find($id);
-        $dat = [
-            'dat' => $old
-        ];       
-         return view('pages.messages.edit', $dat);
-         dd($dat);        
+#        $user = Message::find($id);
+        $old = $id->toArray();
 
-
+        if(view()->exists('pages.messages.edit')){
+            $dat = [
+                'dat' => $old
+            ];       
+            return view('pages.messages.edit', $dat);        
+        }
     }
 }
