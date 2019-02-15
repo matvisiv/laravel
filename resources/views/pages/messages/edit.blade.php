@@ -24,6 +24,6 @@
 	        <hr>
 
    		 </form>
-    @endif ( echo "we")
+    @endif
 
     @stop
