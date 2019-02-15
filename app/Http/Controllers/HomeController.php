@@ -40,8 +40,7 @@ class HomeController extends Controller
 
     public function edit(Message $id,Request $request)
     {
-#        $user = Message::find($id);
-        $old = $id->toArray(); 
+        $old = Message::find($id); 
         dd($old->name);
     }
 }
