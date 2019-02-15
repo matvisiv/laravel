@@ -42,12 +42,13 @@ class HomeController extends Controller
     {
 #        $user = Message::find($id);
         $old = $id->toArray();
-        dd($old); 
-#        if(view()->exists('pages.messages.edit')){
+
+        if(view()->exists('pages.messages.edit')){
             $data = [
                 'data' => $old
             ];       
-            return view('pages.messages.edit', $data);
-#        }
+            return view('pages.messages.edit', $data);        
+        }
+        dd($data);
     }
 }
