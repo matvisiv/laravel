@@ -1,7 +1,7 @@
     @extends('index')
 
     @section('content')
-    	@if ( ! $user->isEmpty() )
+
 	    <form method="POST" action="{{URL::to('/edit')}}" id="id-form_edit">
 	        <div class="form-group">
 	            <label for="name">Имя: *</label>
@@ -24,6 +24,6 @@
 	        <hr>
 
    		 </form>
-    @endif
+ 
 
     @stop
