@@ -3,8 +3,8 @@
     @section('content')
 	    <form method="POST" action="{{URL::to('/edit')}}" id="id-form_edit">
 	        <div class="form-group">
-	            <label for="name">{{ $data->id }}</label>
-	            <input class="form-control" value="" type="text" id="name">
+	            <label for="name">Имя: *</label>
+	            <input class="form-control" value="{{ $data->name }}" type="text" id="name">
 	        </div>
 
 	        <div class="form-group">

@@ -1,7 +1,7 @@
     <form method="POST" action="{{URL::to('/form')}}" id="id-form_messages">
         <div class="form-group">
             <label for="name">Имя: *</label>
-            <input class="form-control" value="qwqwqw"   placeholder="Имя" name="name" type="text" id="name">
+            <input class="form-control" placeholder="Имя" name="name" type="text" id="name">
         </div>
 
         <div class="form-group">
