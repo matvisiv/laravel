@@ -38,7 +38,7 @@ class HomeController extends Controller
         return redirect()->action('HomeController@index');
     }
 
-    public function edit(Message $id,Request $request)
+    public function edit($id)
     {
         $old = Message::find($id); 
         dd($old->name);
