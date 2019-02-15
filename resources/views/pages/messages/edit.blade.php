@@ -1,7 +1,7 @@
     @extends('index')
 
     @section('content')
-	    <form method="POST" action="{{URL::to('/edit')}}" id="id-form_edit">
+	    <form method="POST" action="{{URL::to('/{id}/edit')}}" id="id-form_edit">
 	        <div class="form-group">
 	            <label for="name">Имя: *</label>
 	            <input class="form-control" placeholder="Имя" value="{!! $data->name !!}" name="name" type="text" id="name">
