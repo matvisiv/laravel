@@ -41,7 +41,8 @@ class HomeController extends Controller
     public function edit($id)
     {
         $old = Message::find($id);
-        return view('pages.messages.edit', $old);
-         
+#        return view('', $old);
+        return view('pages.messages.edit', compact(['name', 'email', 'messages']));
+
     }
 }
