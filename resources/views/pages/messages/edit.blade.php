@@ -1,5 +1,6 @@
     @extends('index')
     @section('content')
+    
 	    <form method="POST" route action="{{URL::to('/edit')}}" id="id-form_edit">
 	        <div class="form-group">
 	            <label for="name">Имя: *</label>
