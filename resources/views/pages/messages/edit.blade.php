@@ -1,6 +1,6 @@
     @extends('index')
     @section('content')
 <?php
-	echo $old;
+	echo $id;
 ?>
     @stop
