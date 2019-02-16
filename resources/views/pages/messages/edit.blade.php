@@ -1,6 +1,8 @@
     @extends('index')
     @section('content')
     @if ( ! $old->isEmpty() )
+    	foreach ($old)
+		{
 	    <form method="POST" route action="{{URL::to('/edit')}}" id="id-form_edit">
 	        <div class="form-group">
 	            <label for="name">Имя: *</label>
@@ -23,5 +25,6 @@
 	        <hr>
 
    		 </form>
+   		}
 	@endif
     @stop
