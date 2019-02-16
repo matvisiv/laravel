@@ -14,7 +14,7 @@ Route::get('/', function () {
     return view('index');
 */
 Route::get('/', ['uses' => 'HomeController@index','as' => 'home']);  
-Route::get('/{id}/edit', 'HomeController@edit');
+Route::get('/{id}/edit', 'HomeController@edit')->where('id', '[0-9]+');
 
 
 Route::post('/form', 'HomeController@add');
