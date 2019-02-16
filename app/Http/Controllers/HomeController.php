@@ -16,7 +16,7 @@ class HomeController extends Controller
 		'messages' => Message::latest()->paginate(4),
 		'count' => message::count()
     ];
-        Return view('pages.messages.index', $data);
+        return view('pages.messages.index', $data);
     }
 
  #   public function edit($id)
@@ -41,6 +41,6 @@ class HomeController extends Controller
     public function edit($id)
     {
         $old = Message::find($id);
-        return view('pages.messages.edit', $old); 
+        return $old; 
     }
 }
