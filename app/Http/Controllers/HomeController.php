@@ -37,6 +37,15 @@ class HomeController extends Controller
         $ddd->save();
         return redirect()->action('HomeController@index');
     }
+    public function update(Request $request)
+    {    
+        $ddd->id = $request->update('id');
+        $ddd->name = $request->update('name');
+        $ddd->email = $request->update('email');
+        $ddd->messages = $request->update('messages');
+        $ddd->save();
+        return view('pages.messages.edit');
+    }
 
     public function edit(Request $request, $id)
     {
@@ -45,13 +54,6 @@ class HomeController extends Controller
             'pagetitle' => 'LALALAraveL',
             'oldd' => Message::find($id)
         ];
-
-        $ddd->id = $request->update('id');
-        $ddd->name = $request->update('name');
-        $ddd->email = $request->update('email');
-        $ddd->messages = $request->update('messages');
-        $ddd->save();
-        
         return view('pages.messages.edit', $old);
 
     }
