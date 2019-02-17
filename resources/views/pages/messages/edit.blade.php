@@ -13,7 +13,7 @@
 
 	        <div class="form-group">
 	            <label for="messages">Сообщение: *</label>
-	            <textarea class="form-control" rows="5" value="{!! $oldd->messages !!}" name="messages" cols="50"  id="messages"></textarea>
+	            <textarea class="form-control" rows="5" value="" name="messages" cols="50"  id="messages">{!! $oldd->messages !!}</textarea>
 	        </div>
 	        <input type="hidden" name="_token" value="{{ csrf_token() }}">
 	        <div class="form-group">
