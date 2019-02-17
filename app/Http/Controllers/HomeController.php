@@ -55,7 +55,7 @@ class HomeController extends Controller
             'pagetitle' => 'LALALAraveL',
             'oldd' => Message::find($id)
         ];
-        return view('pages.messages."$id".edit', $old);
+        return view('pages.messages.edit', $old);
 
     }
 }
