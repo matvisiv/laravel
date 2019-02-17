@@ -1,6 +1,6 @@
     @extends('index')
     @section('content')
-	    <form method="POST" route action="{!! $oldd->$id !!}/edit" id="id-form_edit">
+	    <form method="POST" route action="{{ $oldd->$id }}/edit" id="id-form_edit">
 	        <div class="form-group">
 	            <label for="name">Имя: *</label>
 	            <input class="form-control" value="{!! $oldd->name !!}" type="text" id="name">
