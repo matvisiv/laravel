@@ -43,8 +43,6 @@ class HomeController extends Controller
         $old = [
             'oldd' => Message::find($id)
         ];
-        }
         return view('pages.messages.edit', $old);
-
     }
 }
