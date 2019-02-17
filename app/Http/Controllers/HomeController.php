@@ -29,7 +29,7 @@ class HomeController extends Controller
  #   }
 
     public function add(Request $request)
-    {
+    {    
         $ddd = new Message;
         $ddd->name = $request->input('name');
         $ddd->email = $request->input('email');
@@ -38,7 +38,7 @@ class HomeController extends Controller
         return redirect()->action('HomeController@index');
     }
 
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
         $old = [
             'title' => 'Guestbook',
@@ -46,5 +46,10 @@ class HomeController extends Controller
             'oldd' => Message::find($id)
         ];
         return view('pages.messages.edit', $old);
+
+        $ddd->name = $request->input('name');
+        $ddd->email = $request->input('email');
+        $ddd->messages = $request->input('messages');
+        DB::update('update Message set name = ? email = ? messages = ? where id = ?',[$name,$email,$messages,$id]);
     }
 }
