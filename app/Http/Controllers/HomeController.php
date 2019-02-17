@@ -45,11 +45,14 @@ class HomeController extends Controller
             'pagetitle' => 'LALALAraveL',
             'oldd' => Message::find($id)
         ];
+
+        $ddd->id = $request->update('id');
+        $ddd->name = $request->update('name');
+        $ddd->email = $request->update('email');
+        $ddd->messages = $request->update('messages');
+        $ddd->save();
+        
         return view('pages.messages.edit', $old);
 
-        $ddd->name = $request->input('name');
-        $ddd->email = $request->input('email');
-        $ddd->messages = $request->input('messages');
-        DB::update('update Message set name = ? email = ? messages = ? where id = ?',[$name,$email,$messages,$id]);
     }
 }

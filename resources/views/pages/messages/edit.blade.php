@@ -15,6 +15,7 @@
 	            <label for="messages">Сообщение: *</label>
 	            <textarea class="form-control" rows="5" value="" name="messages" cols="50"  id="messages">{!! $oldd->messages !!}</textarea>
 	        </div>
+	        <input type="hidden" name="id" value="{!! $oldd->id !!}">
 	        <input type="hidden" name="_token" value="{{ csrf_token() }}">
 	        <div class="form-group">
 	            <input class="btn btn-primary" type="submit" value="Добавить">
