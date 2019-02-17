@@ -37,17 +37,17 @@ class HomeController extends Controller
         $ddd->save();
         return redirect()->action('HomeController@index');
     }
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {    
         $ddd->id = $request->update('id');
         $ddd->name = $request->update('name');
         $ddd->email = $request->update('email');
         $ddd->messages = $request->update('messages');
         $ddd->save();
-        return view('pages.messages.edit');
+        return redirect()->action('HomeController@index');
     }
 
-    public function edit(Request $request, $id)
+    public function edit($id)
     {
         $old = [
             'title' => 'Guestbook',
