@@ -1,6 +1,6 @@
     @extends('index')
     @section('content')
-	    <form method="POST" route action="{{URL::to('/$oldd->id/edit')}}" id="id-form_edit">
+	    <form method="POST" route action="{{URL::to('/edit')}}" id="id-form_edit">
 	        <div class="form-group">
 	            <label for="name">Имя: *</label>
 	            <input class="form-control" value="{!! $oldd->name !!}" type="text" id="name">
@@ -18,7 +18,7 @@
 	        <input type="hidden" name="id" value="{!! $oldd->id !!}">
 	        <input type="hidden" name="_token" value="{{ csrf_token() }}">
 	        <div class="form-group">
-	            <input class="btn btn-primary" type="submit" value="Добавить">
+	            <input class="btn btn-primary" type="submit" value="Зберегти">
 	        </div>
 	        <hr>
 
