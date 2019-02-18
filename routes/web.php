@@ -19,7 +19,7 @@ Route::get('/{id}/edit', 'HomeController@edit')->where('id', '[0-9]+');
 Route::post('/edit', 'HomeController@update');
 
 Route::post('/form', 'HomeController@add');
-Route::post('/{id}/del', 'HomeController@delete');
+Route::get('/{id}/del', 'HomeController@delete');
 
 
 
