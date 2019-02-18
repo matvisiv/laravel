@@ -47,7 +47,6 @@ class HomeController extends Controller
     public function edit($id)
     {
         $oldd = Message::where('id', '=', $id);
-        ];
         return view('pages.messages.edit', $oldd);
 
     }
