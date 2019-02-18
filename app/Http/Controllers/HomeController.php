@@ -37,7 +37,7 @@ class HomeController extends Controller
         $ddd->save();
         return redirect()->action('HomeController@index');
     }
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {    
         $ddd = Message::where('id', '=', $id)->first();
         $ddd->update($request->all());
