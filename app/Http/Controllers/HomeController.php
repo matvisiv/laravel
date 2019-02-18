@@ -40,7 +40,7 @@ class HomeController extends Controller
     public function update(Request $request)
     {    
         $ddd = Message::where('id', '=', $request->input('id'));
-        $ddd->update($request->all());
+        $ddd->update($request->except('id', '_token'));
         return redirect()->action('HomeController@index');
     }
 
