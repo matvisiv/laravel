@@ -43,7 +43,12 @@ class HomeController extends Controller
         $ddd->update($request->except('id', '_token'));
         return redirect()->action('HomeController@index');
     }
-
+    public function delete(Request $request, $id)
+    {    
+        $ddd = Message::where('id', '=', $id);
+        $ddd->delete();
+        return redirect()->action('HomeController@index');
+    }
     public function edit($id)
     {
         $old = [
