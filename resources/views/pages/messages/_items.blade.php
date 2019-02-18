@@ -19,10 +19,10 @@
                         <a class="btn btn-info" href="/{!! $message->id !!}/edit">
                             <i class="glyphicon glyphicon-pencil"></i>
                         </a>
-                        <button class="btn btn-danger">
-                            <a href="/{!! $message->id !!}/delt"></a>
+                        <div>
+                            <a class="btn btn-danger" href="/{!! $message->id !!}/delt"></a>
                             <i class="glyphicon glyphicon-trash"></i>
-                        </button>
+                        </div>
                     </div>
                 </div>
             </div>
