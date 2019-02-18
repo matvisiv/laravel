@@ -19,10 +19,9 @@
                         <a class="btn btn-info" href="/{!! $message->id !!}/edit">
                             <i class="glyphicon glyphicon-pencil"></i>
                         </a>
-                        <div>
-                            <a class="btn btn-danger" href="/{!! $message->id !!}/delt"></a>
-                            <i class="glyphicon glyphicon-trash"></i>
-                        </div>
+                        <button class="btn btn-danger">
+                            <i class="glyphicon glyphicon-trash" href="/{!! $message->id !!}/delt"></i>
+                        </button>
                     </div>
                 </div>
             </div>
